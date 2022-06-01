@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #555;
+}
+.container{
+    padding: 2%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.book-container{
+    background: #fff;
+    margin: 1%;
+    color: black;
+    padding: 3%;
+}
+.book-container h2{
+}
+.pictureUrl img{
+    width: 350px;
+    height: 550px;
+    align-items: center;
+}
+.pictureUrl a{
+    margin-top: -5%;
+    text-decoration: none;
+    background: #008000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1%;
+    font-weight: 500;
+    transition: .5s;
+}
+.pictureUrl a:hover{
+    background: #04c004;
+}
