@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    min-height: 70px;
+    background-color: beige;
+}
+main{
+    display: flex;
+    min-height: 50vh;
+}
+.content{
+    width: 70%;
+}
+.sidebar{
+    width: 30%;
+}
+.footer{
+    background-color: beige;
+    min-height: 200px;
+}
+@media screen and (min-widht: 600px){
+    main{
+        display: flex;
+        min-height: 50vh;
+    }
+    .content{
+        width: 70%;
+    }
+    .sidebar{
+
+    }
+}
