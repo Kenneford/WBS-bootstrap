@@ -6,11 +6,11 @@ function Content(props){
             <div>
                 <h2>Blog Overview</h2>
             </div>
-            <div>
+            {/* <div>
                 <BlogOverview post={props.blogs[0]}/>
                 <BlogOverview post={props.blogs[1]}/>
                 <BlogOverview post={props.blogs[2]}/>
-            </div>
+            </div> */}
         </div>
 
     )
