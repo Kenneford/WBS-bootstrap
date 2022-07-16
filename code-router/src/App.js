@@ -2,8 +2,6 @@ import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
 import Student from "./Student";
 import Results from "./Results";
-import Student2 from "./Student2";
-import Results2 from "./Results2";
 import "./styles.css";
 
 export default function App() {

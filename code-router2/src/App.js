@@ -1,12 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, Switch} from "react-router-dom";
+import Student from "./Student";
+import Results from "./Results";
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
       <nav>
-        <Link className="link" to="/students/#2">
+        <Link className="link" to="/students/2">
           Students #2
         </Link>
         <Link className="link" to="/results/john">
@@ -53,15 +55,16 @@ export default function App() {
         </p>
 
         <p className="block">Create your routing here! (Switch & Routes)</p>
-        <Switch>
-          <Route path="/students#2">
+        
+      </div>
+	  <Switch>
+          <Route path="/students/2">
             <Student />
           </Route>
-          <Route path="/results#2">
+          <Route path="/results/john">
             <Results />
           </Route>
         </Switch>
-      </div>
     </div>
   );
 }

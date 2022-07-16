@@ -1,8 +1,7 @@
 import React from 'react'
 
 export default function Student() {
-    const params = useParams(i)
   return (
-    <div>Hello {params.id}</div>
+    <div>Hello [id from the parameter]!</div>
   )
 }
