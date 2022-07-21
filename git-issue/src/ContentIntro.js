@@ -17,7 +17,7 @@ export default function ContentIntro() {
         </div>
         <div className='intro-2'>
             <div className='intro-2-left'>
-                <p>Help, npm audit says I have a vulnerability in react-<br/>scripts!</p>
+                <p className='high-light'>Help, <span>npm audit</span> says I have a vulnerability in react-<br/>scripts!</p>
                 <p className='small-fonts'>#11174 opened on Jul 2, 2021 by gaearon</p>
                 <p className='small-fonts'>
                     <i className="fa-regular fa-circle-dot open-dot"></i>Open 
@@ -25,7 +25,7 @@ export default function ContentIntro() {
                 </p>
             </div>
             <div className='intro-2-right'>
-                <p>Error when using new 'react-jsx' TypeScript <br/>transform</p>
+                <p className='high-light'>Error when using new 'react-jsx' TypeScript <br/>transform</p>
                 <p className='small-fonts'>#10144 by dcsan was closed on Nov 25, 2020</p>
                 <p className='small-fonts'>
                     <i class="fa-regular fa-circle-check"></i>Closed 
@@ -36,7 +36,7 @@ export default function ContentIntro() {
         <div className='intro-3'>
             <div className='filter-cont'>
                 <div className='filter'>
-                    <p>Filter</p> 
+                    <p>Filters</p> 
                     <i class="fa-solid fa-sort-down filter-down"></i>
                 </div>
                 <i className="fa-solid fa-magnifying-glass" id="search"></i>

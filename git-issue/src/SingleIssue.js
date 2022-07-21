@@ -1,7 +1,12 @@
 import React from 'react'
+import ContentIntro from './ContentIntro'
+import Header from './Header'
 
 export default function SingleIssue() {
   return (
-    <div>SingleIssue</div>
+    <div>
+        {/* <Header />
+        <ContentIntro /> */}
+    </div>
   )
 }
