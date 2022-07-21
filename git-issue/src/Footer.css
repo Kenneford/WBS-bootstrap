@@ -1,0 +1,98 @@
+.pagination{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination .p{
+    width: 40px;
+    margin:  10px 5px;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+}
+.pagination .p:hover{
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #5a5959cc;
+}
+.left-angle{
+    color: #5a5959cc;
+    padding: 5px;
+    margin-left: 10px;
+}
+.right-angle{
+    width: 90px;
+    color: #0ea0f4;
+    padding: 10px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.right-angle:hover{
+    cursor: pointer;
+    border: 1px solid #5a5959cc;
+}
+.page-1{
+    background: #0ea0f4;
+    border-radius: 5px;
+    width: 40px;
+    margin:  10px 5px;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+
+}
+.tips{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.tips p{
+    font-size: 1.2em;
+    letter-spacing: .7px;
+    padding-bottom: 30px;
+    font-weight: 300;
+    color: #cccc;
+}
+.fa-lightbulb{
+    margin-right: 10px;
+}
+strong{
+    margin-right: 10px;
+}
+
+.copy-right{
+    width: 82%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #383737cc;
+}
+.copy-right p{
+    margin: 50px 50px 50px 0;
+    color: #0ea0f4;
+}
+.copy-right p:hover{
+    text-decoration: underline;
+}
+.copy-wrap{
+    display: flex;
+}
+.copy-wrap i, .copy-wrap .copy-p{
+    color: #cccc;
+}
+/* .git{
+    padding-right: 60px;
+} */
+.git{
+    margin-top: 45px;
+    padding-right: 10px;
+    font-size: 2em;
+}
+.copy-p:hover{
+    text-decoration: none;
+}

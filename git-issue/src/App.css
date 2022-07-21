@@ -1,0 +1,27 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background: #0d1117;
+}
+
+.App {
+  text-align: left;
+  margin: auto;
+  color: #fff;
+}
+.issues-cont{
+  width: 60%;
+  margin: auto;
+  border: 1px solid #2f2f2fcc;
+  border-bottom: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.issues-wrap{
+  padding: 5px;
+  border-bottom: 1px solid #2f2f2fcc;
+}
+.issues-wrap:hover{
+  background: #292929;
+}

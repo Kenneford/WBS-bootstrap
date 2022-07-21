@@ -1,0 +1,334 @@
+.header{
+    background: 0d1117;
+}
+.userHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    margin-right: 5px;
+    background: #292929;
+    height: 70px;
+  }
+
+  /* Left Header Styling */
+  .header-left{
+    display: flex;
+    padding: 5px;
+    margin-top: 13px;
+  }
+  .new-git{
+    padding-top: 2px;
+    font-size: 2em;
+    color: #fff;
+  }
+  .header-search input{
+    width: 355px;
+    border: 1px solid #4d4d4dcc;
+    padding: 7px;
+    font-size: 1.2em;
+    margin: 0 10px;
+    background: #0d1117;
+    border-radius: 5px;
+  }
+  .header-search input:focus{
+    width: 500px;
+  }
+  .header-search input::placeholder{
+    padding-left: 5px;
+  }
+  .fa-square-full{
+    position: absolute;
+    border: 2px solid #4d4d4dcc;
+    font-size: 1.4em;
+    margin-left: -43px;
+    margin-right: 20px;
+    top: 24px;
+    color: #202020;
+    border-radius: 3px;
+  }
+  .fa-slash-forward{
+    position: absolute;
+    left: 418px;
+    top: 27px;
+    font-size: 1.2em;
+  }
+  .aTags{
+    padding: 5px 0;
+  }
+  .aTags a{
+    padding: 10px;
+    text-decoration: none;
+    color: #c8c7c7;
+    font-size: 1.2em;
+  }
+
+  /* Right Header Styling */
+
+  .header-right{
+    display: flex;
+    padding: 5px;
+    color: #c8c7c7;
+    /* align-items: center; */
+  }
+  .fa-bell{
+    margin-top: 17px;
+    margin-right: 15px;
+  }
+  .header-right p{
+    margin-right: 15px;
+  }
+  .header-right i{
+    font-size: 1.3em;
+    padding: 5px;
+  }
+  .down-key{
+    position: absolute;
+    top: 17px;
+}
+  .user{
+    padding: 5px 30px 0 0;
+  }
+  .user img{
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .user-arrow{
+    position: absolute;
+    top: 17px;
+  }
+
+  /* Repository Header Styling */
+  .repositoryHeader{
+    border-bottom: 1px solid #4d4d4dcc;
+  }
+  .repoTop{
+    display: flex;
+    justify-content: space-between;
+  }
+
+   /* Left Repo */
+  .repoTop-left{
+    display: flex;
+    color: #0ea0f4;
+    padding: 20px 50px;
+    font-size: 1.3em;
+  }
+  .repoTop-left p{
+    margin: 10px 2px 0;
+  }
+  .facebook, .react-app{
+    font-weight: 500;
+  }
+  .facebook:hover, .react-app:hover{
+    text-decoration: underline;
+  }
+  #public-btn{
+    width: 70px;
+    height: 30px;
+    margin: 10px;
+    background: transparent;
+    border: 1px solid #4d4d4dcc;
+    border-radius: 20px;
+    color: #7c7c7ccc;
+  }
+
+
+  /* Right Repo */
+  .repoTop-right{
+    display: flex;
+    padding: 20px;
+
+  }
+  .repoTop-right .sponsor, .watch{
+    margin: 5px;
+    height: 30px;
+    color: #c8c7c7;
+  }
+  .repoTop-right  .sponsor:hover, .watch:hover{
+    background: #5e5e5e;
+    border: 1px solid #999898;
+  }
+  .sponsor{
+    display: flex;
+    width: 120px;
+    align-items: center;
+    background: #343434;
+    border-radius: 5px;
+    border: 1px solid #4d4d4dcc;
+  }
+  .fa-heart{
+    margin: 10px;
+    padding-left: 5px;
+    font-size: 1.3em;
+    color: #d87093;
+  }
+  .watch{
+    display: flex;
+    width: 170px;
+    align-items: center;
+    background: #343434;
+    border-radius: 5px;
+    border: 1px solid #4d4d4dcc;
+  }
+  .watch p{
+    margin: 5px;
+  }
+  .watch .fa-eye{
+    padding-left: 10px;
+    color: #8a8989cc;
+  }
+  .watch .fa-sort-down{
+    margin-left: 6px;
+    margin-bottom: 5px;
+  }
+  .rates{
+    margin-right: 7px;
+    background: #575757cc;
+    padding: 0px 10px;
+    border-radius: 20px;
+  }
+  .fork, .star{
+    display: flex;
+  }
+  .fork-wrap, .star-wrap{
+    display: flex;
+    width: 150px;
+    height: 30px;
+    align-items: center;
+    background: #343434;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #4d4d4dcc;
+    margin: 5px;
+  }
+  .fork-wrap:hover, .star-wrap:hover{
+    background: #5e5e5e;
+    border: 1px solid #999898;
+  }
+  .fork p{
+    margin: 5px;
+  }
+  .fa-code-fork{
+    padding-left: 18px;
+  }
+  /* .star-wrap{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    background: #343434;
+    border-radius: 5px;
+    border: 1px solid #4d4d4dcc;
+  } */
+  .star{
+    margin-left: 5px;
+  }
+  .star p{
+    margin: 5px;
+  }
+  .fa-star{
+    padding-left: 15px;
+    color: #8a8989cc;
+  }
+  .div-downKey{
+    width: 40px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: -5px;
+    background: #343434;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #4d4d4dcc;
+    /* border-left: 1px solid #4d4d4dcc; */
+  }
+  .div-downKey:hover{
+    background: #5e5e5e;
+    border: 1px solid #999898;
+  }
+  .div-down{
+    margin: 5px 0 0 15px;
+  }
+
+
+  /* Repo Down Line Styling */
+  .repoDown{
+    display: flex;
+    color: #c8c7c7;
+    padding: 0 40px;
+  }
+  .repoDown div{
+    padding: 10px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .repoDown div:hover{
+    background: #343434;
+  }
+  .code{
+    display: flex;
+    align-items: center;
+  }
+  .code i{
+    margin: 0px 10px;
+  }
+  .issues{
+    display: flex;
+    align-items: center;
+  }
+  .issues p{
+    margin-right: 10px;
+  }
+  .issues i{
+    margin: 0px 5px;
+  }
+  .line{
+    position: absolute;
+    top: 182px;
+    left: 140px;
+    border: 1px solid salmon;
+    width: 140px;
+  }
+  .pull-request{
+    display: flex;
+    align-items: center;
+  }
+  .pull-request i{
+    margin: 0px 10px;
+  }
+  .pull-request p{
+    margin-right: 10px;
+  }
+  .discussions{
+    display: flex;
+    align-items: center;
+  }
+  .discussions i{
+    margin: 0px 10px;
+  }
+  .action{
+    display: flex;
+    align-items: center;
+  }
+  .action i{
+    margin: 0px 10px;
+  }
+  .project{
+    display: flex;
+    align-items: center;
+  }
+  .project i{
+    margin: 0px 10px;
+  }
+  .security{
+    display: flex;
+    align-items: center;
+  }
+  .security i{
+    margin: 0px 10px;
+  }
+  .insights{
+    display: flex;
+    align-items: center;
+  }
+  .insights i{
+    margin: 0px 10px;
+  }
