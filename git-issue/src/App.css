@@ -10,36 +10,29 @@ body{
   margin: auto;
   color: #fff;
 }
-.issues-cont{
-  width: 65%;
-  margin: auto;
-  border: 1px solid #2f2f2fcc;
-  border-bottom: none;
-  border-radius: 5px;
-  margin-top: 15px;
-}
-.issues-wrap{
-  display: flex;
-  padding: 5px;
-  border-bottom: 1px solid #2f2f2fcc;
-}
-.issues-wrap i{
-  font-size: 1em;
-}
-.issues-wrap:hover{
-  background: #292929;
-}
-.issue-msg a{
-  text-decoration: none;
-  color: #c8c7c7;
-  margin-right: 20px;
-}
-.label-links a{
-  text-decoration: none;
-  color: #c8c7c7;
-  align-items: center;
+.empty-page-msg{
   text-align: center;
-  background: #78620b;
+  margin-top: 50px;
+  padding: 20px 0;
+  color: #c0bfbf;
+  display: flex;
+  justify-content: center;
+}
+.ooops{
+  /* background: #fff; */
+}
+.ooops-btn{
+  width: 120px;
+  position: relative;
+  margin-left: 900px;
+  padding: 10px 20px;
+  border: none;
   border-radius: 20px;
-  padding: 1px 5px;
+  color: #fff;
+  font-size: 1.2em;
+  background: #0ea0f4;
+}
+.ooops-btn:hover{
+  background: #148dd3;
+  cursor: pointer;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import logo from './my-pic.jpg'
+import { Link, Outlet } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -43,33 +44,33 @@ export default function Header() {
                 </div>
                 <div className='repoTop-right'>
                     <div className='sponsor'>
-                        <i class="fa-regular fa-heart"></i>
+                        <i className="fa-regular fa-heart"></i>
                         <p>Sponsor</p>
                     </div>
                     <div className='watch'>
-                        <i class="fa-regular fa-eye"></i>
+                        <i className="fa-regular fa-eye"></i>
                         <p>Watch</p>
                         <p className='rates'>1.9k</p>
-                        <i class="fa-solid fa-sort-down"></i>
+                        <i className="fa-solid fa-sort-down"></i>
                     </div>
                     <div className='fork'>
                         <div className='fork-wrap'>
-                            <i class="fa-regular fa-code-fork"></i>
+                            <i className="fa-regular fa-code-fork"></i>
                             <p>Fork</p>
                             <p className='rates'>24.9k</p>
                         </div>
                         <div className='div-downKey'>
-                            <i class="fa-solid fa-sort-down div-down"></i>
+                            <i className="fa-solid fa-sort-down div-down"></i>
                         </div>
                     </div>
                     <div className='star'>
                         <div className='star-wrap'>
-                            <i class="fa-regular fa-star"></i>
+                            <i className="fa-regular fa-star"></i>
                             <p>Star</p>
                             <p className='rates'>96.1k</p>
                         </div>
                         <div className='div-downKey'>
-                            <i class="fa-solid fa-sort-down div-down"></i>
+                            <i className="fa-solid fa-sort-down div-down"></i>
                         </div>
                     </div>
                 </div>
@@ -81,17 +82,17 @@ export default function Header() {
                 </div>
                 <div className='issues'>
                     <i className="fa-regular fa-circle-dot"></i>
-                    <p>Issues</p>
+                    <p className='issues-link'><Link to="/issues-messages">Issues</Link></p>
                     <p className='rates'>1.4k</p>
                     <p className='line'></p>
                 </div>
                 <div className='pull-request'>
-                <i class="fa-regular fa-code-pull-request-draft"></i>
+                <i className="fa-regular fa-code-pull-request-draft"></i>
                     <p>Pull request</p>
                     <p className='rates'>350</p>
                 </div>
                 <div className='discussions'>
-                    <i class="fa-regular fa-comments"></i>
+                    <i className="fa-regular fa-comments"></i>
                     <p>Discussions</p>
                 </div>
                 <div className='action'>
@@ -99,7 +100,7 @@ export default function Header() {
                     <p>Actions</p>
                 </div>
                 <div className='project'>
-                    <i class="fa-regular fa-chart-network"></i>
+                    <i className="fa-regular fa-chart-network"></i>
                     <p>Project</p>
                 </div>
                 <div className='security'>

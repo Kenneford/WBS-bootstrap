@@ -104,6 +104,7 @@
   /* Repository Header Styling */
   .repositoryHeader{
     border-bottom: 1px solid #4d4d4dcc;
+    background: #0d1117;
   }
   .repoTop{
     display: flex;
@@ -283,6 +284,10 @@
   }
   .issues p{
     margin-right: 10px;
+  }
+  .issues-link a{
+    text-decoration: none;
+    color: #c8c7c7;
   }
   .issues i{
     margin: 0px 5px;

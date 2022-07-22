@@ -9,7 +9,7 @@ export default function ContentIntro() {
                 <p>👋 Want to contribute to facebook/create-react-app?</p>
                 <div className='dismiss-cont'>
                     <p className='dismiss-p'>Dismiss</p>
-                    <i class="fa-solid fa-sort-down dismiss-down"></i>
+                    <i className="fa-solid fa-sort-down dismiss-down"></i>
                 </div>
             </div>
             <p>If you have a bug or an idea, read the <span>contributing guidelines</span> before opening an issue.</p>
@@ -21,15 +21,15 @@ export default function ContentIntro() {
                 <p className='small-fonts'>#11174 opened on Jul 2, 2021 by gaearon</p>
                 <p className='small-fonts'>
                     <i className="fa-regular fa-circle-dot open-dot"></i>Open 
-                    <i class="fa-regular fa-message"></i>71
+                    <i className="fa-regular fa-message"></i>71
                 </p>
             </div>
             <div className='intro-2-right'>
                 <p className='high-light'>Error when using new 'react-jsx' TypeScript <br/>transform</p>
                 <p className='small-fonts'>#10144 by dcsan was closed on Nov 25, 2020</p>
                 <p className='small-fonts'>
-                    <i class="fa-regular fa-circle-check"></i>Closed 
-                    <i class="fa-regular fa-message"></i>28
+                    <i className="fa-regular fa-circle-check"></i>Closed 
+                    <i className="fa-regular fa-message"></i>28
                 </p>
             </div>
         </div>
@@ -37,19 +37,19 @@ export default function ContentIntro() {
             <div className='filter-cont'>
                 <div className='filter'>
                     <p>Filters</p> 
-                    <i class="fa-solid fa-sort-down filter-down"></i>
+                    <i className="fa-solid fa-sort-down filter-down"></i>
                 </div>
                 <i className="fa-solid fa-magnifying-glass" id="search"></i>
                 <input type="text" placeholder="is:issue is:open" id='filter-input'/>
             </div>
             <div className='lab-mile-cont'>
                 <div className='lables'>
-                <i class="fa-regular fa-window-restore"></i>
+                <i className="fa-regular fa-window-restore"></i>
                     <p>Lables</p>
                     <p className='rates'>32</p>
                 </div>
                 <div className='milestones'>
-                <i class="fa-regular fa-gem"></i>
+                <i className="fa-regular fa-gem"></i>
                     <p>Milestones</p>
                     <p className='rates'>4</p>
                 </div>
