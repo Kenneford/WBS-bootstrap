@@ -15,9 +15,12 @@
 .dismiss-cont{
     display: flex;
 }
+.dismiss-cont:hover{
+    color: #0ea0f4;
+}
 .dismiss-cont{
     position: absolute;
-    right: 400px;
+    right: 350px;
 }
 .dismiss-p:hover{
     color: #0ea0f4;

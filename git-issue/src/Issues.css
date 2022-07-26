@@ -9,12 +9,14 @@
   .issues-wrap{
     display: flex;
     padding: 5px;
-    border-bottom: 1px solid #2f2f2fcc;
   }
   .issues-wrap i{
     font-size: 1em;
   }
-  .issues-wrap:hover{
+  .issues-container{
+    border-bottom: 1px solid #2f2f2fcc;
+  }
+  .issues-container:hover{
     background: #292929;
   }
   .issue-msg a{
@@ -40,6 +42,12 @@
     background: #17410c;
     border-radius: 20px;
     padding: 1px 5px;
+  }
+  .issue-info{
+    margin-left: 30px;
+    color: #696969;
+    margin-top: -7px;
+    margin-bottom: 4px;
   }
   /* .label-links a{
     width: 200px;

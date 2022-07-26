@@ -7,13 +7,13 @@ import Issues from './Issues'
 // Using params to display maore information:
 export default function SingleIssue() {
     const params = useParams()
-    const singleIssue = Issues(parseInt(params.issueID, 10))
+    const singleIssue = Issues(parseInt(params.issueID))
   return (
-        <div>
-            <p>Title: {singleIssue.title}</p>
+        <div className='issues-container'>
             <p>Number: {singleIssue.number}</p>
             <p>NodeID: {singleIssue.node_id}</p>
-            <h1>IssueID: {singleIssue.body}</h1>
+            <p>Body: {singleIssue.body}</p>
         </div>
   )
+  
 }

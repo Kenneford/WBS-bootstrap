@@ -3,6 +3,7 @@
 }
 body{
   background: #0d1117;
+  /* background: #fff; */
 }
 
 .App {
@@ -20,11 +21,13 @@ body{
 }
 .ooops{
   /* background: #fff; */
+  text-align: center;
+
 }
 .ooops-btn{
   width: 120px;
-  position: relative;
-  margin-left: 900px;
+  /* position: relative;
+  margin-left: 900px; */
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
@@ -35,4 +38,10 @@ body{
 .ooops-btn:hover{
   background: #148dd3;
   cursor: pointer;
+}
+.ooops-img img{
+    margin-top: 40px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
 }

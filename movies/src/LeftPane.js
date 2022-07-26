@@ -3,7 +3,7 @@ import './LeftPane.css';
 
 function LeftPane() {
     const [movies, setMovies] = useState([])
-const [searchWord, setSearchWord] = useState('destiny')
+    const [searchWord, setSearchWord] = useState('destiny')
 
     const readMovies = async () =>{
         const response = await fetch(`

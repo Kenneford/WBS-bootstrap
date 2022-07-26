@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 
 export default function IssuesData() {
     const [issues, setIssues] = useState([])
-    const dataUrl = "http://api.github.com/repos/facebook/create-react-app/issues"
+    const dataUrl = "http://api.github.com/repos/facebook/create-react-app/issues?"
     useEffect(()=>{
         const issuesData = async () =>{
         const response = await fetch(dataUrl)
@@ -15,15 +15,15 @@ export default function IssuesData() {
         }
         issuesData()
     }, [])
-    // useEffect(()=>{
-    //     if(!issues){
-    //         return (
-    //             <div>
-    //                 Loading...
-    //             </div>
-    //         )
-    //       }
-    // })
+    useEffect(()=>{
+        if(!issues){
+            return (
+                <div>
+                    Loading...
+                </div>
+            )
+          }
+    })
   return issues;
 }
 

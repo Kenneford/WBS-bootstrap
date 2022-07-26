@@ -104,7 +104,8 @@
   /* Repository Header Styling */
   .repositoryHeader{
     border-bottom: 1px solid #4d4d4dcc;
-    background: #0d1117;
+    /* background: #0d1117; */
+    /* background: #fff; */
   }
   .repoTop{
     display: flex;
