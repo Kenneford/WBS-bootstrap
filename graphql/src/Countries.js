@@ -1,17 +1,18 @@
 import React from 'react'
 
-export default function Countries({countries, continent}) {
-    const countriesList = countries.map((country, id)=>{
-        <div key={id}>
-            <div>{country.code}</div>
-            <div>{country.name}</div>
-            <div>{country.capital}</div>
+function Countries({countries, continent}) {
+    const countriesList = countries.map((country, id)=>(
+        <div key={id} className="continent">
+            <div><p>{country.code}</p></div>
+            <div><p>{country.name}</p></div>
+            <div><p>{country.capital}</p></div>
         </div>
-    })
+    ))
   return (
     <div>
-        <h1>Counties in {continent}</h1>
+        <h1>Countries in {continent}</h1>
         {countriesList}
     </div>
   )
 }
+export default Countries;
