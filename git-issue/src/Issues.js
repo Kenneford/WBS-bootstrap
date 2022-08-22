@@ -37,7 +37,7 @@ export default function Issues() {
             )
             })}
         </div>
-        <Outlet />
+        {/* <Outlet /> */}
     </div>
   )
 }
