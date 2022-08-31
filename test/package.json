@@ -1,0 +1,12 @@
+{
+  "name": "test",
+  "version": "0.0.2",
+  "description": "Server test",
+  "main": "Testserver.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kenn",
+  "license": "ISC"
+}

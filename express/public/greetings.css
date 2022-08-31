@@ -1,0 +1,21 @@
+body {
+  background: #292929;
+  color: #fff;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  color: orange;
+}
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 2px #ffa500;
+}
+.content img {
+  border-radius: 50%;
+}
