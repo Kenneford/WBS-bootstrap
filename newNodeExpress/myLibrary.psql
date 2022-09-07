@@ -9,6 +9,8 @@ insert into books(author, title, release_year) values ('Mark Twain', 'Huckleberr
 insert into books(author, title, release_year) values ('Mark Twain', 'The Adventure', 1892); 
 insert into books(author, title, release_year) values ('Frank Herbert', 'Dune', 1965); 
 
+select * from books;
+
 select * from books
 where author = 'Mark Twain' and release_year > 1880;
 
