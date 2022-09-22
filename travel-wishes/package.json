@@ -1,0 +1,17 @@
+{
+  "name": "travel-wishes",
+  "version": "1.0.0",
+  "description": "Travel Wishes Exercise",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kenn",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}

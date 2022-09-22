@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.tableCont {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+}
+.tableCont div {
+  padding: 0 30px;
+}
+.tableRow {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}

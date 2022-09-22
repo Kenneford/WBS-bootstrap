@@ -14,7 +14,8 @@ select * from books;
 select * from books
 where author = 'Mark Twain' and release_year > 1880;
 
-select * from books where id = 4;
+select * from books 
+where id = 4;
 
 update books
 set release_year = 1877

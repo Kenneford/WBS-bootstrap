@@ -1,79 +1,151 @@
-const dotenv = require("dotenv");
-dotenv.config();
-// import * from 'dotenv';
+require("dotenv").config();
+
+const {
+  patchTable,
+  getBooks,
+  getOneBook,
+  getAuthors,
+  deleteAuthor,
+  deleteBook,
+  updateAuthor,
+  insertBook,
+  insertAuthor,
+  getOneAuthor,
+} = require("./controllers/mongodb_operations");
+//const {patchTable} = require('./controllers/mongodb_operations')
+//import * from 'dotenv'
 
 const express = require("express");
-const { Pool } = require("PG");
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 app.set("view engine", "ejs");
-
-// const books = [
-//   {
-//     author: "Mark twain",
-//     title: "Huckleberry Finn",
-//     releasedYear: 1884,
-//   },
-//   {
-//     author: "Frank Herbert",
-//     title: "Dune",
-//     releasedYear: 1965,
-//   },
-// ];
 
 const port = process.env.PORT || 4000;
 
-const pool = new Pool({
-  user: process.env.PG_USER,
-  host: process.env.PG_HOST,
-  database: process.env.PG_DATABASE,
-  password: process.env.PG_PASSWORD,
-  port: process.env.PG_PORT,
-  ssl: true,
-  ssl: { rejectUnauthorized: false },
-});
+function sendErrorOutput(err, res) {
+  res.status(400).send({
+    errors: [err.message],
+  });
+}
 
-app.get("/", (req, res) => res.render("greeting"));
+app.get("/", (req, res) => {
+  res.render("greeting");
+});
 
 app.get("/api/book", (req, res) => {
-  pool
-    .query("SELECT * FROM books;")
-    .then((data) => {
-      res.json(data.rows);
+  getBooks()
+    .then((books) => {
+      res.json(books);
     })
-    .catch((err) => {
-      res.status(400).send({
-        error: err.message,
-      });
-    });
+    .catch((err) => sendErrorOutput(err, res));
 });
 
-// Params
+app.get("/api/author", (req, res) => {
+  getAuthors()
+    .then((authors) => {
+      res.json(authors);
+    })
+    .catch((err) => sendErrorOutput(err, res));
+});
+
 app.get("/api/book/:id", (req, res) => {
   const { id } = req.params;
-  pool
-    .query("SELECT * FROM books WHERE id=$1;", [id])
+  getOneBook(id)
     .then((data) => {
-      res.json(data.rows);
+      res.json(data);
     })
-    .catch((err) => {
-      res.status(400).send({
-        error: err.message,
-      });
-    });
+    .catch((err) => sendErrorOutput(err, res));
+});
+
+app.get("/api/author/:id", (req, res) => {
+  const { id } = req.params;
+  getOneAuthor(id)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => sendErrorOutput(err, res));
+});
+
+app.delete("/api/author/:id", (req, res) => {
+  const { id } = req.params;
+  deleteAuthor(id)
+    .then(() => {
+      res.send({ status: "deleted" });
+    })
+    .catch((err) => sendErrorOutput(err, res));
+});
+
+app.delete("/api/book/:id", (req, res) => {
+  const { id } = req.params;
+  deleteBook(id)
+    .then(() => {
+      res.send({ status: "deleted" });
+    })
+    .catch((err) => sendErrorOutput(err, res));
+});
+
+app.put("/api/author/:id", (req, res) => {
+  const { id } = req.params;
+
+  if (!req.body.name || !req.body.birthYear) {
+    return res
+      .status(400)
+      .send({ error: "name or birthYear is missing. Check API documentation" });
+  }
+
+  updateAuthor(id, req.body)
+    .then((updatedData) => {
+      res.send(updatedData);
+    })
+    .catch((err) => sendErrorOutput(err, res));
+});
+
+app.patch("/api/author/:id", (req, res) => {
+  const { id } = req.params;
+  const fieldMapping = {
+    name: "name",
+    birthYear: "birth_year",
+  };
+
+  patchTable("author", fieldMapping, id, req)
+    .then(() => {
+      res.send({ status: "updated" });
+    })
+    .catch((err) => sendErrorOutput(err, res));
+});
+
+app.patch("/api/book/:id", (req, res) => {
+  const { id } = req.params;
+  const fieldMapping = {
+    releaseYear: "release_year",
+    title: "title",
+    authorId: "author_id",
+  };
+
+  patchTable("books", fieldMapping, id, req)
+    .then(() => {
+      res.send({ status: "updated" });
+    })
+    .catch((err) => sendErrorOutput(err, res));
+});
+
+app.get("/blog", (req, res) => {
+  res.send([
+    {
+      blogId: 3,
+      title: "Blog post title",
+      content: "adsfasdfasdfa",
+      mainPicUrl: "http://????????????????",
+    },
+    {},
+  ]);
 });
 
 app.post("/api/book", (req, res) => {
-  console.log(req.body);
-  pool
-    .query(
-      `
-  insert into books(author, title, release_year) 
-  values ($1, $2, $3) returning *;
-  `,
-      [req.body.author, req.body.title, req.body.releasedYear]
-    )
+  insertBook(req.body)
     .then((data) => {
       res.status(201).send(data);
     })
@@ -82,9 +154,14 @@ app.post("/api/book", (req, res) => {
         error: err.message,
       });
     });
-  //   res.status(201).send({ status: "created" });
 });
 
-console.log(process.env.PG_DATABASE);
-// app.listen(port, () => console.log("server listening at " + port));
-app.listen(port, () => console.log("connected to Postgre"));
+app.post("/api/author", (req, res) => {
+  insertAuthor(req.body)
+    .then((data) => {
+      res.status(201).send(data);
+    })
+    .catch((err) => sendErrorOutput(err, res));
+});
+
+app.listen(port, () => console.log(`conncted to Postgre at port ${port}`));

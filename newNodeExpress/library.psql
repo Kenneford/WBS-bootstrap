@@ -21,6 +21,7 @@ insert into books(title, release_year, author_id) values ('Dune', 1965, 2);
 
 -- drop table books;
 select * from books;
+select * from author;
 
 select books.id, books.title, author.id as author_id, author.name from books
 join author
@@ -35,5 +36,8 @@ on books.author_id = author.id;
 -- set release_year = 1877
 -- where id = 4;
 
--- delete from books
--- where id = 16;
+delete from books
+where id = 6;
+
+delete from author
+where id between 7 and 17;
